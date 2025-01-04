@@ -1,0 +1,25 @@
+{
+  "name": "ctjs",
+  "version": "1.27.0",
+  "main": "db.js",
+  "scripts": {
+    
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alertifyjs": "^1.14.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "sql": "^0.78.0",
+    "sqlite3": "^5.1.7",
+    "websocket": "^1.0.35",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
