@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Тулбар -->
+    <div id="toolbar" style="display: none;">
+        <nav>
+            <ul>
+                
+                <li><a id="menuLink" href="#home">Головна</a></li>
+                <li><a id="settingsLink" href="#settings">Налаштування</a></li>
+                
+                <li><a id="forumLink" href="#forum">ctФорум</a></li>
+                <li><a id="friendListLink" href="#friendlist">Друзі</a></li>
+            </ul>
+        </nav>
+        <h3 id="userDisplay" style="position: absolute; top: 10px; right: 20px;"></h3>
+    </div>
+    
+    <!-- Головний інтерфейс -->
+    <div id="ui" style="display: none;">
+        <h4>Вас вітає CT REVIVE1!  З недавнього :</h4>
+        <h5>CT розморожується та переробляється.</h5>
+    </div>
+    
+    <!-- Контейнер для авторизації -->
+    <div id="auth" class="glass-container">
+        <h2>Авторизація</h2>
+        <warntext>Сайт може не відповідати.При такому випадку зачекайте 5хв</warntext>
+        <input type="text" id="loginUsername" placeholder="Ім'я користувача">
+        <input type="password" id="loginPassword" placeholder="Пароль">
+        <button id="loginButton">Увійти</button>
+        <button id="createAccountButton" class="glass-container">Створити акаунт</button>
+        <div id="errorMessage"></div>
+    </div>
+
+    <!-- Контейнер для створення акаунта (поки прихований) -->
+    <div id="authCreate" class="glass-container" style="display: none;">
+        <h2>Створення акаунта</h2>
+        <input type="text" id="username" placeholder="Ім'я користувача">
+        <input type="password" id="password" placeholder="Пароль">
+        <button id="createAccountButton">Створити акаунт</button>
+        <div id="errorMessage"></div>
+    </div>
+
+    <!-- Контейнер для спільного чату -->
+    <div id="forumContainer" class="glass-container" style="display:none;">
+        <h2>Спільний чат</h2>
+        <div id="chatHistory" style="color: azure; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; height: 300px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px;"></div>
+        <input type="text" id="chatMessage" placeholder="Напишіть повідомлення...">
+        <button id="sendMessageButton">Відправити</button>
+    </div>
+
+    <!-- Контейнер для налаштувань -->
+    <div id="settings" class="glass-container" style="display: none;">
+        <h4>Налаштування</h4>
+        <button onclick="get_isc()">Переглянути ІКС</button>
+    </div>
+
+    <!-- Контейнер для списку друзів -->
+    <div id="friendList" class="glass-container" style="display: none;">
+        <h4>Список друзів</h4>
+        <ul id="friendListContent"></ul>
+        <input type="text" id="newFriendUsername" placeholder="Ім'я користувача">
+        <button id="addFriendButton">Додати друга</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
